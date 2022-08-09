@@ -13,7 +13,7 @@
 // "Aluno em exame.".
 
 // No caso do aluno estar em exame,
-//     leia um valor correspondente à nota do 
+// leia um valor correspondente à nota do 
 // exame obtida pelo aluno.Imprima então a mensagem
 // "Nota do exame: " acompanhada pela nota digitada.
 // Recalcule a média(some a pontuação do exame 
@@ -50,46 +50,39 @@
 
 var input = require('fs').readFileSync('stdin', 'utf8');
 
-var valores = input.split('\n');
+var lines = input.split('\n');
 
-const valoresIndice = valores[0].split(' ')
-const N1 = Number(valoresIndice[0])
-const N2 = Number(valoresIndice[1])
-const N3 = Number(valoresIndice[2])
-const N4 = Number(valoresIndice[3])
-const N5 = Number(valores[1])
+let notas = lines[0].split(' ');
 
-function mediaNota() {
-    return ((N1 * 2) + (N2 * 3) + (N3 * 4) + N4) / 10
-}
+media =
+  (Number(notas[0]) * 2 +
+    Number(notas[1]) * 3 +
+    Number(notas[2]) * 4 +
+    Number(notas[3])) /
+  10;
 
-function exame() {
-    return (N5 + mediaNota()) / 2
-}
+console.log(`Media: ${media.toFixed(1)}`);
 
-if (mediaNota() >= 7) {
-    console.log(`
-    Media: ${mediaNota().toFixed(1)} 
-    Aluno aprovado.`)
-} else if (mediaNota() < 5) {
-    console.log(`
-    Media: ${mediaNota().toFixed(1)} 
-    Aluno reprovado.`)
-} else if (N5 >= 5) {
-    console.log(`
-    Media: ${mediaNota().toFixed(1)}
-    Aluno em exame.
-    Nota do exame: ${N5}
-    Aluno aprovado.
-    Media final: ${exame().toFixed(1)}`)
+if (media >= 7.0) {
+  console.log('Aluno aprovado.');
+} else if (media < 5.0) {
+  console.log('Aluno reprovado.');
 } else {
-    console.log(`
-    Media: ${mediaNota().toFixed(1)}
-    Aluno em exame.
-    Nota do exame: ${N5}
-    Aluno Reprovado.
-    Media final: ${exame().toFixed(1)}`)
+  console.log('Aluno em exame.');
+  let exame = parseFloat(lines[1]);
+  console.log(`Nota do exame: ${exame.toFixed(1)}`);
+
+  media = (media + exame) / 2;
+
+  if (media >= 5.0) {
+    console.log('Aluno aprovado.');
+  } else {
+    console.log('Aluno reprovado.');
+  }
+
+  console.log(`Media final: ${media.toFixed(1)}`);
 }
+
 
 //tempo 21 minutos
-// dificuldade ao implementar o if else if.
+// dificuldade com o app ao enviar a questão...
