@@ -39,3 +39,6 @@ function PontoOrigen(x,y) {
     }
 }
 PontoOrigen(x, y);
+
+//tempo 26 minutos 
+// tratando erros de sintaxe
