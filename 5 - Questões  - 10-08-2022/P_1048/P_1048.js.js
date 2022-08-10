@@ -46,7 +46,7 @@ function ReajSal(salario) {
         reajust = salario * perc / 100;
         novoSal = reajust + salario;
     }
-    console.log(`Novo Salario: ${novoSal.toFixed(2)}`);
+    console.log(`Novo salario: ${novoSal.toFixed(2)}`);
     console.log(`Reajuste ganho: ${reajust.toFixed(2)}`);
     console.log(`Em percentual: ${perc} %`);
 }
