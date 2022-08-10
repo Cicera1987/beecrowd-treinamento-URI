@@ -17,7 +17,44 @@
 // Saída
 // Imprima todas as classificações do triângulo especificado na entrada.
 
-var input = require('fs').readFileSync('stdin','utf8');
+var input = require('fs').readFileSync('stdin', 'utf8');
 
-var [A, B, C] = input.split(" ").map(item => parseFloat(item))
+var [x, y, z] = input.split(" ").map(item => parseFloat(item));
 
+if (x >= y && x >= z) {
+    a = x;
+    b = y;
+    c = z;
+}
+if (y >= x && y >= z) {
+    a = y;
+    b = x;
+    c = z;
+}
+if (z >= x && z >= y) {
+    a = z;
+    b = x;
+    c = y;
+}
+
+if (a >= (b + c)) {
+    console.log(`NAO FORMA TRIANGULO`);
+} else if ((a*a) === (b*b + c*c)) {
+    console.log(`TRIANGULO RETANGULO`);
+
+} else if ((a*a) > (b*b + c*c)) {
+    console.log(`TRIANGULO OBTUSANGULO`);
+
+} else if ((a*a) < (b*b + c*c)) {
+    console.log(`TRIANGULO ACUTANGULO`);
+
+}
+if (a === b && b === c) {
+    console.log(`TRIANGULO EQUILATERO`);
+
+} else if (a === b || b === c) {
+console.log( `TRIANGULO ISOSCELES`);
+
+}
+
+//tempo 18
