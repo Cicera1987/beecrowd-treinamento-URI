@@ -17,3 +17,4 @@ for (let i = 0; i < num.length; i++) {
 } console.log(`${numPositivo} valores positivos`)
 console.log(`${media.toFixed(1)}`)
 
+// tempo 12 minutos - pois a Uri estava dano erro de 20%
