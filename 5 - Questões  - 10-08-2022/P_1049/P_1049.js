@@ -39,5 +39,5 @@ if (String(lines[0]) === 'vertebrado') {
 } else { console.log('minhoca') }
 
 
-
+// tempo 40 minutos e ainda a Uri não aceitou
 
