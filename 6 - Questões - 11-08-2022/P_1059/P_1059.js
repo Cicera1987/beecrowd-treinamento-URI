@@ -9,3 +9,5 @@
 for (let par = 2; par <= 100; par = par + 2) {
     console.log(par)
 }
+
+// tempo, 8 pois a URi não aceitou a primeira opção do for()
