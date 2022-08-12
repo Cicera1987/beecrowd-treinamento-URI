@@ -29,4 +29,4 @@ for (i = 1; i <= 100; i++) {
 console.log(`${valorMaior}`)
 console.log(`${posicao}`)
 
-//tempo 23 minutos + 10 minutos para descobrir o erro
+//tempo 23 minutos + 5 minutos para descobrir o erro
