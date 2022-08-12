@@ -8,13 +8,16 @@ let impar = 0;
 let positivo = 0;
 let negativo = 0;
 
-for (i = 0; i <= num.length; i++) {
+for (i = 1; i <= num.length; i++) {
     if (num[i] % 2 === 0) {
-        par+= 1;
-    } 
-    if (num[i] % 2 != 0) {
-        impar+= 1;
+        par += 1;
     }
+    if (num[i] % 2 !== 0) {
+        impar += 1;
+    }
+}
+
+for (i = 0; i <= num.length; i++) {
     if (num[i] > 0) {
         positivo+= 1;
     }
@@ -22,10 +25,11 @@ for (i = 0; i <= num.length; i++) {
         negativo+= 1;
     }
 }
+
 console.log(`${par} valor(es) par(es) 
 ${impar} valor(es) impar(es) 
 ${positivo} valor(es) positivos(s) 
 ${negativo} valor(es) negativo(s)`);
 
 
-// tempo 19 minutos - não finalizado (negativo ta com erro)
+// tempo 19 minutos - não finalizado (URI mosta 5% de rrro na lógica, não descobri)
