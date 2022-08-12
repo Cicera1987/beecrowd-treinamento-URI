@@ -8,22 +8,24 @@ let impar = 0;
 let positivo = 0;
 let negativo = 0;
 
-for (i = 1; i <= num.length; i++) {
+for (i = 0; i <= num.length; i++) {
     if (num[i] % 2 === 0) {
-        par++;
-    } else {
-        impar++;
+        par+= 1;
+    } 
+    if (num[i] % 2 != 0) {
+        impar+= 1;
     }
     if (num[i] > 0) {
-        positivo++;
+        positivo+= 1;
     }
     if (num[i] < 0) {
-        negativo++;
+        negativo+= 1;
     }
 }
-console.log(`${par} valor(es) par(es)`);
-console.log(`${impar} valor(es) impar(es)`);
-console.log(`${positivo} valor(es) positivos(s)`);
-console.log(`${negativo} valor(es) negativo(s)`);
+console.log(`${par} valor(es) par(es) 
+${impar} valor(es) impar(es) 
+${positivo} valor(es) positivos(s) 
+${negativo} valor(es) negativo(s)`);
 
-//tempo 19 minutos - não finalizado (negativo ta com erro)
+
+// tempo 19 minutos - não finalizado (negativo ta com erro)
