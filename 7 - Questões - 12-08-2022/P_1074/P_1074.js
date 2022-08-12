@@ -1,4 +1,22 @@
 
-var input = require('fs').readFileSync('stdin','utf8');
+var input = require('fs').readFileSync('stdin', 'utf8');
 
-var valores = input.split("\n");
+var num = input.split("\n").map(item => parseInt(item))
+
+for (i = 1; i < num.length; i++) {
+    if (num[i] === 0) {
+        console.log(`NULL`)
+    } else if (num[i] > 0 && num[i] % 2 === 0) {
+        console.log(`EVENT POSITIVE`)
+    } else if (num[i] < 0 && num[i] % 2 === 0) {
+        console.log(`EVENT NEGATIVE`)
+    } else if (num[i] > 0 && num[i] % 2 !== 0) {
+        console.log(`ODD POSITIVE`)
+    } else if (num[i] < 0 && num[i] % 2 !== 0) {
+        console.log(`ODD NEGATIVE`)
+    }
+
+}
+
+
+// tempo 22 minutos... Mesmoo assim tem erro na lógica de 5%, não sei o que é
